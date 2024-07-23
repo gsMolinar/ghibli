@@ -8,8 +8,8 @@ body a:hover {
   color: #723a05;
 }
 body iframe {
-  width: 560px;
-  height: 315px;
+  width: clamp(19rem, 38vw, 34rem);
+  aspect-ratio: 4/3;
 }
 body header {
   display: flex;
@@ -19,6 +19,78 @@ body header {
 body header .logo {
   width: 224px;
 }
+@media screen and (max-width: 42rem) {
+  body header .logo {
+    display: none;
+  }
+}
+body header .minilogo {
+  width: 48px;
+  display: none;
+}
+@media screen and (max-width: 42rem) {
+  body header .minilogo {
+    display: block;
+  }
+}
+@media screen and (max-width: 42rem) {
+  body header nav {
+    display: none;
+  }
+}
+body header .btnMenu {
+  width: 38px;
+  display: none;
+}
+@media screen and (max-width: 42rem) {
+  body header .btnMenu {
+    display: block;
+  }
+}
+body header .menu {
+  z-index: 999;
+  display: none;
+  width: 100%;
+  position: absolute;
+  right: 0%;
+  top: 88px;
+  background-color: #fbc078;
+  box-shadow: 19px 1px 22px -15px rgba(0, 0, 0, 0.29);
+  transition: all 0.25s ease;
+  height: auto;
+}
+body header .menu.show {
+  display: block;
+}
+body header .menu .menuHeader {
+  padding: 0px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header .menu .menuHeader h2 {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 25px 0px;
+}
+body header .menu .menuHeader i {
+  cursor: pointer;
+  color: #f1f1f1;
+  background-color: #1e1e1e;
+  padding: 4px;
+  border-radius: 50%;
+}
+body header .menu .navMenu {
+  display: block;
+}
+body header .menu .navMenu a {
+  color: #181818;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 24px;
+}
 body main img {
-  width: 400px;
+  width: clamp(19rem, 38vw, 34rem);
 }/*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,6 @@
+@mixin breakpoint1 {
+    @media screen and (max-width:42rem) {@content};
+}
 body{
     background-color: #f5dcb4;
     a{
@@ -7,8 +10,9 @@ body{
         color: #723a05;
     }
     iframe{
-        width: 560px;
-        height: 315px;
+        width: clamp(19rem , 38vw, 34rem);
+        aspect-ratio: 4/3;
+       
     }
     header{
         display: flex;
@@ -16,11 +20,80 @@ body{
         justify-content: space-between;
         .logo{
             width: 224px;
+            @include breakpoint1{
+                display: none;
+            }
+        }
+        .minilogo{
+            width: 48px;
+            display: none;
+            @include breakpoint1{
+                display: block;
+            }
+        }
+        nav{
+            @include breakpoint1{
+                display: none;
+            }
+        }
+        .btnMenu{
+            width: 38px;
+            display: none;
+            @include breakpoint1{
+                display: block;
+            }
+        }
+        .menu {
+            z-index: 999;
+            display: none;
+            width: 100%;
+            position: absolute;
+            right: 0%;
+            top: 88px;
+            background-color: #fbc078;
+            box-shadow: 19px 1px 22px -15px rgba(0, 0, 0, 0.29);
+            transition: all .25s ease;
+            height: auto;
+            
+            &.show {
+                display: block;
+                
+            }
+            .menuHeader{
+                padding: 0px 8px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h2 {
+                    width: 100%;
+                    font-size: 20px;
+                    font-weight: 600;
+                    padding: 25px 0px;
+                } 
+                i{
+                    cursor: pointer;
+                    color: #f1f1f1;
+                    background-color: #1e1e1e;
+                    padding: 4px;
+                    border-radius: 50%;
+                }
+            }
+            .navMenu{
+                display: block;
+                a{
+                    color: #181818;
+                    font-size: 1.1rem;
+                    text-decoration: none;
+                    display: block;
+                    margin-bottom: 24px;
+                }
+                
+            }
         }
     }
     main{
         img{
-            width: 400px;
+            width: clamp(19rem , 38vw, 34rem);
         }
     }
 }
