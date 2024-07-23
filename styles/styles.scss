@@ -1,0 +1,26 @@
+body{
+    background-color: #f5dcb4;
+    a{
+        color: #121212;
+    }
+    a:hover{
+        color: #723a05;
+    }
+    iframe{
+        width: 560px;
+        height: 315px;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            width: 224px;
+        }
+    }
+    main{
+        img{
+            width: 400px;
+        }
+    }
+}

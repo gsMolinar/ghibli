@@ -1,0 +1,24 @@
+body {
+  background-color: #f5dcb4;
+}
+body a {
+  color: #121212;
+}
+body a:hover {
+  color: #723a05;
+}
+body iframe {
+  width: 560px;
+  height: 315px;
+}
+body header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header .logo {
+  width: 224px;
+}
+body main img {
+  width: 400px;
+}/*# sourceMappingURL=styles.css.map */
